@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Angular JS.☺ </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+</head>
+<body ng-app="app" ng-controller="MainController as main">
+    <h2>Welcome to angularjs Program.</h2>
+    <form class="" action="#">
+        <label for="first">First values</label>
+        <input type="number" name="number" ng-model="main.num1"> <br>
+        <label for="first">First values</label>
+        <input type="number" name="number" ng-model="main.num2">
+        <hr>
+    </form>
+    <h3>Sum of: {{mian.num1 + main.num2}}</h3>
+    <h3>Product of: {{main.num1 * main.num2}}</h3>
+
+</body>
+</html>

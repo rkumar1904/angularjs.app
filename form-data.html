@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Angular JS.☺ </title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" charset="utf-8"></script>
+  <script src="js/app.js" charset="utf-8"></script>
+</head>
+<body ng-app="app-form" ng-controller="FormController as main">
+
+  <h3>My todo list...</h3>
+  <form>
+    <label for="name">Add task</label><br>
+    <input type="text" ng-model="newtask.name" placeholder="Enter the task name">
+    <input type="submit" ng-click="main.add(newtask)" value="Add Task"/>
+    <input type="submit" ng-click="main.deleteAll()" value="Delete All Task"/>
+
+  </form>
+  <ul>
+    <li ng-repeat="task in main.tasks">
+      <!-- <input type="checkbox" ng-model="main.task"> {{task.name}} -->
+      <input type="checkbox" ng-model="task.done" ng-click="main.delete(task)">
+      <span ng-hide="task.done">{{task.name}} </span>
+      <!-- {{task.name}} -->
+    </li>
+  </ul>
+</body>
+</html>
